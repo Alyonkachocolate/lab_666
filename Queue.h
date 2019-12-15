@@ -50,24 +50,24 @@ public:
 
     T pop() {
         Node *new_last = nullptr;
-        if (first_ == nullptr) {
-            throw out_of_range("This stack is empty");
-        }
+        if (size_ == 1) {
+            Node *removed = last_;
+            T value = removed->value_;
+            delete removed;
+            first_ = last_ = nullptr;
+            size_ = 0;
+            return value;
+        } else {
         Node *node = first_;
         while (node != last_) {
             new_last = node;
             node = node->next_;
-        };
-        if (size_ == 1) {
-            first_ = last_ = nullptr;
         }
-        Node *n1 = last_;
-        T value = n1->value_;
-        last_ = new_last;
+        T value = node->value_;
         delete node;
+        last_=new_last;
         size_--;
-
-        return value;
+        return value;}
     }
 
     size_t size() const {

@@ -23,12 +23,12 @@ int main() {
     Queue<int> queue;
     int b;
 
-    for (int i = 0; i <= 3; i++) {
+    for (int i = 0; i <= 0; i++) {
         cin >> b;
         queue.push(b);
     }
 
-    cout << "size " << queue.size() << endl;
+    //cout << "size " << queue.size() << endl;
     queue.print();
     cout << queue.pop() << endl;
     queue.print();

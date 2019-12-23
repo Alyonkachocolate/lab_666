@@ -39,7 +39,6 @@ public:
     void push(T value) {
         Node *node = new Node(value);
         if (first_ == nullptr) {
-            node->next_ = first_;
             first_ = last_ = node;
         } else {
             node->next_ = first_;
@@ -49,7 +48,6 @@ public:
     }
 
     T pop() {
-        Node *new_last = nullptr;
         if (size_ == 1) {
             Node *removed = last_;
             T value = removed->value_;
@@ -58,13 +56,15 @@ public:
             size_ = 0;
             return value;
         } else {
-        Node *node = first_;
-        while (node != last_) {
+            Node *new_last = nullptr;
+            Node *node = first_;
+            while (node != last_) {
             new_last = node;
             node = node->next_;
         }
         T value = node->value_;
         delete node;
+        new_last->next_=nullptr;
         last_=new_last;
         size_--;
         return value;}

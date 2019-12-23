@@ -64,7 +64,6 @@ public:
     void print() {
         Node *node = first_;
         while (node != nullptr) {
-            //Node *next = node->next_;
             cout << node->value_ << ' ';
             node = node->next_;
         }

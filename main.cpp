@@ -1,7 +1,3 @@
-#include <iostream>
-#include "Stack.h"
-#include "Queue.h"
-#include "List.h"
 #include "StackTest.h"
 #include "QueueTest.h"
 #include "ListTest.h"
@@ -13,8 +9,8 @@ using std::string;
 
 int main() {
 
-    //Stack_Test();
-    //Queue_Test();
+    Stack_Test();
+    Queue_Test();
     List_Test();
     return 0;
 }

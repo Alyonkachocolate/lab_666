@@ -8,9 +8,9 @@ using std::endl;
 using std::string;
 
 int main() {
-
     Stack_Test();
     Queue_Test();
     List_Test();
+
     return 0;
 }

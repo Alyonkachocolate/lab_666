@@ -14,7 +14,6 @@ using std::endl;
 using std::out_of_range;
 
 template<typename T>
-
 class List {
     class Node {
         friend class List;

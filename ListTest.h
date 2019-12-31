@@ -47,11 +47,14 @@ void List_Test() {
     list.add_before(c, k);
     list.print();
 
-//    cout << "size " << list.size() << endl;
-//    list.print();
+    cout << "Размер: " << list.size() << endl;
+    list.print();
 
-//    cout << list.pop() << endl;
-//    list.print();
+    cout << "Удаление с начала" << endl << list.pop_begin() << endl;
+    list.print();
+
+    cout << "Удаление с концв" << endl << list.pop_end() << endl;
+    list.print();
 }
 
 #endif //LAB_666_LISTTEST_H

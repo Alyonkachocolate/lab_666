@@ -33,20 +33,17 @@ void List_Test() {
 
     cout<<"Добавление по индексу (1) (значение, индекс)"<<endl;
     int k;
-    cin >> c;
-    cin >> k;
+    cin >> c >> k;
     list.push_i_index(c, k);
     list.print();
 
     cout << "Добавление по значению после элемента (1) (значение, после какого элемента)" << endl;
-    cin >> c;
-    cin >> k;
+    cin >> c >> k;
     list.add_after(c, k);
     list.print();
 
     cout << "Добавление по значению до элемента (1) (значение, до какого элемента)" << endl;
-    cin >> c;
-    cin >> k;
+    cin >> c >> k;
     list.add_before(c, k);
     list.print();
 

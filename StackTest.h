@@ -16,6 +16,7 @@ using std::string;
 void Stack_Test(){
     cout << "Stack" << endl;
     Stack<int> stack;
+
     int a;
     cout << "Добавление в начало (4)" << endl;
     for (int i = 0; i <= 3; i++) {

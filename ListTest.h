@@ -16,7 +16,9 @@ using std::string;
 void List_Test() {
     cout << "List" << endl;
     List<int> list;
+
     int c;
+
     cout << "Добавление в начало (2)" << endl;
     for (int i = 0; i < 2; i++) {
         cin >> c;

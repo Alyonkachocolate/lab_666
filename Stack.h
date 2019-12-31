@@ -11,7 +11,6 @@ using std::endl;
 using std::out_of_range;
 
 template<typename T>
-
 class Stack {
 
     class Node {

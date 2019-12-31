@@ -15,8 +15,8 @@ using std::string;
 void Queue_Test(){
     cout << "Queue" << endl;
     Queue<int> queue;
-    int b;
 
+    int b;
     cout << "Добавление в начало (4)" << endl;
     for (int i = 0; i <= 3; i++) {
         cin >> b;

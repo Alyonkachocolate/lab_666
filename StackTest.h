@@ -13,7 +13,7 @@ using std::cin;
 using std::endl;
 using std::string;
 
-void Stack_Test(){
+void Stack_Test() {
     cout << "Stack" << endl;
     Stack<int> stack;
 

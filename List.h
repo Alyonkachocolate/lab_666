@@ -113,6 +113,7 @@ class List {
 
         T value = node->value_;
         delete node;
+        --size_;
 
         return value;
     }
@@ -224,6 +225,22 @@ public:
             }
             node = node->next_;
         }
+    }
+
+    T pop_i_index(int index) {
+        if (index < 0 || index >= size_) throw out_of_range("Bad index");
+
+        if (index == 0) return pop_first();
+        if (index == size_ - 1) return pop_last();
+
+        int i = 0;
+        Node* node = first_;
+        while (node != last_) {
+            node = node->next_;
+            if (++i == index) return pop(node);
+        }
+
+        throw out_of_range("Bad index");
     }
 
     size_t size() const {

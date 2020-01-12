@@ -57,6 +57,16 @@ void List_Test() {
 
     cout << "Удаление с концв" << endl << list.pop_end() << endl;
     list.print();
+
+    cout << "Удаление заданного (удаляемый)" << endl;
+    cin >> c;
+    list.pop(c);
+    list.print();
+
+    cout << "Удаление по индексу (1) (индекс)" << endl;
+    cin >> k;
+    list.pop_i_index(k);
+    list.print();
 }
 
 #endif //LAB_666_LISTTEST_H

@@ -19,15 +19,15 @@ void List_Test() {
 
     int c;
 
-    cout << "Добавление в начало (2)" << endl;
-    for (int i = 0; i < 2; i++) {
+    cout << "Добавление в начало (3)" << endl;
+    for (int i = 0; i < 3; i++) {
         cin >> c;
         list.push_begin(c);
     }
     list.print();
 
-    cout<<"Добавление в конец (2)"<<endl;
-    for (int i = 0; i < 2; i++) {
+    cout<<"Добавление в конец (3)"<<endl;
+    for (int i = 0; i < 3; i++) {
         cin >> c;
         list.push_end(c);
     }
@@ -65,8 +65,16 @@ void List_Test() {
 
     cout << "Удаление по индексу (1) (индекс)" << endl;
     cin >> k;
-    list.pop_i_index(k);
+    cout<<list.pop_i_index(k)<<endl;
     list.print();
+
+    cout << "Поиск по значению (1) (значение)" << endl;
+    cin >> k;
+    cout<<list.find(k)<<endl;
+
+    cout << "Поиск по индексу (1) (индекс)" << endl;
+    cin >> k;
+    cout<<list.find_i_index(k)<<endl;
 }
 
 #endif //LAB_666_LISTTEST_H

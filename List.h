@@ -172,7 +172,6 @@ public:
     void add_before(T value, T next_value) {
         if (size_ == 0) return;
 
-        cout << first_->value_ << endl;
         if (first_->value_ == next_value) {
             push_first(new Node(value));
             return;
@@ -238,6 +237,44 @@ public:
         while (node != last_) {
             node = node->next_;
             if (++i == index) return pop(node);
+        }
+
+        throw out_of_range("Bad index");
+    }
+
+    int find(T value) {
+        if (size_ == 0) throw out_of_range("Bad value");;
+        if (size_ == 1) {
+            return 0;
+        }
+        if (first_->value_ == value) {
+            return 0;
+        }
+        if (last_->value_ == value) {
+            return size()-1;
+        }
+        int i=0;
+        Node* node = first_;
+        while (node != last_) {
+            i++;
+            if (node->value_ == value) {
+                return i-1;
+            }
+            node = node->next_;
+        }
+    }
+
+    T find_i_index(int index) {
+        if (index < 0 || index >= size_) throw out_of_range("Bad index");
+
+        if (index == 0) return 0;
+        if (index == size_) return size()-1;
+
+        int i = 0;
+        Node* node = first_;
+        while (node != last_) {
+            node = node->next_;
+            if (++i == index) return node->value_;
         }
 
         throw out_of_range("Bad index");
